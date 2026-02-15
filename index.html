@@ -17,6 +17,11 @@
             box-sizing: border-box;
         }
         
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
@@ -24,6 +29,8 @@
             animation: gradientShift 15s ease infinite;
             color: #fff;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
         
         @keyframes gradientShift {
@@ -198,6 +205,13 @@
         
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
+        /* Prevent horizontal overflow on all sections */
+        section, div {
+            max-width: 100%;
         }
         
         /* Enhanced Mobile Responsiveness */
@@ -410,6 +424,8 @@
             top: 0;
             left: 0;
             right: 0;
+            width: 100%;
+            max-width: 100vw;
             z-index: 1000;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
@@ -503,11 +519,11 @@
     <nav class="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 md:h-20">
-                <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <span class="text-white font-black text-xl">R2H</span>
                     </div>
-                    <span class="text-xl md:text-2xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <span class="text-lg sm:text-xl md:text-2xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent whitespace-nowrap">
                         Rent2Home
                     </span>
                 </div>
@@ -553,32 +569,32 @@
                     Waiting for Launch 🚀
                 </div> -->
                 
-                <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                     Rent2Home
                 </h1>
                 
-                <p class="text-2xl md:text-4xl font-bold mb-4 text-gray-200">
+                <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-200">
                     Rent Anything. Delivered to Your Door.
                 </p>
                 
-                <div class="flex flex-wrap justify-center gap-3 mb-6 max-w-3xl mx-auto">
-                    <div class="glass-strong px-6 py-3 rounded-full flex items-center gap-2 pulse-glow">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 max-w-3xl mx-auto px-4">
+                    <div class="glass-strong px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 pulse-glow">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                         </svg>
-                        <span class="font-bold text-green-400">Instant Delivery</span>
+                        <span class="font-bold text-green-400 text-sm sm:text-base whitespace-nowrap">Instant Delivery</span>
                     </div>
-                    <div class="glass-strong px-6 py-3 rounded-full flex items-center gap-2 pulse-glow">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="glass-strong px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 pulse-glow">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                         </svg>
-                        <span class="font-bold text-blue-400">Door-to-Door Service</span>
+                        <span class="font-bold text-blue-400 text-sm sm:text-base whitespace-nowrap">Door-to-Door</span>
                     </div>
-                    <div class="glass-strong px-6 py-3 rounded-full flex items-center gap-2 pulse-glow">
-                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="glass-strong px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 pulse-glow">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                         </svg>
-                        <span class="font-bold text-purple-400">Easy Pickup</span>
+                        <span class="font-bold text-purple-400 text-sm sm:text-base whitespace-nowrap">Easy Pickup</span>
                     </div>
                 </div>
                 
@@ -586,32 +602,32 @@
                     From gadgets to grand celebrations — we bring it home.
                 </p>
                 
-                <div class="inline-block mb-12 px-8 py-4 glass-strong rounded-2xl pulse-glow">
-                    <div class="text-5xl font-black bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2">
+                <div class="inline-block mb-12 px-6 sm:px-8 py-4 glass-strong rounded-2xl pulse-glow">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2">
                         COMING SOON
                     </div>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
-                    <div class="countdown-box rounded-xl p-4">
-                        <div id="days" class="text-4xl md:text-5xl font-bold text-purple-400">00</div>
-                        <div class="text-sm text-gray-400 uppercase tracking-wider">Days</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto mb-12 px-2">
+                    <div class="countdown-box rounded-xl p-3 sm:p-4">
+                        <div id="days" class="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400">00</div>
+                        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Days</div>
                     </div>
-                    <div class="countdown-box rounded-xl p-4">
-                        <div id="hours" class="text-4xl md:text-5xl font-bold text-pink-400">00</div>
-                        <div class="text-sm text-gray-400 uppercase tracking-wider">Hours</div>
+                    <div class="countdown-box rounded-xl p-3 sm:p-4">
+                        <div id="hours" class="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400">00</div>
+                        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Hours</div>
                     </div>
-                    <div class="countdown-box rounded-xl p-4">
-                        <div id="minutes" class="text-4xl md:text-5xl font-bold text-blue-400">00</div>
-                        <div class="text-sm text-gray-400 uppercase tracking-wider">Minutes</div>
+                    <div class="countdown-box rounded-xl p-3 sm:p-4">
+                        <div id="minutes" class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400">00</div>
+                        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Minutes</div>
                     </div>
-                    <div class="countdown-box rounded-xl p-4">
-                        <div id="seconds" class="text-4xl md:text-5xl font-bold text-green-400">00</div>
-                        <div class="text-sm text-gray-400 uppercase tracking-wider">Seconds</div>
+                    <div class="countdown-box rounded-xl p-3 sm:p-4">
+                        <div id="seconds" class="text-3xl sm:text-4xl md:text-5xl font-bold text-green-400">00</div>
+                        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Seconds</div>
                     </div>
                 </div>
                 
-                <button class="btn-glow px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold relative z-10 transform hover:scale-105 transition-all duration-300">
+                <button class="btn-glow px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg sm:text-xl font-bold relative z-10 transform hover:scale-105 transition-all duration-300">
                     Notify Me
                 </button>
             </div>
